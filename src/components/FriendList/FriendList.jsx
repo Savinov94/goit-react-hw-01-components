@@ -1,7 +1,6 @@
-import friends from '../json/friends.json';
 import css from './FriendList.module.css'
 
-const FriendList = (props) => {
+const FriendList = ({friends}) => {
 return (
         friends.map((friends) => (
             <section key={friends.id} className={css.friendSection}>

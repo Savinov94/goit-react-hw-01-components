@@ -1,7 +1,6 @@
-import data from '../json/data.json';
 import css from './Statistics.module.css'
 
-const Statistics = (props) => {
+const Statistics = ({data}) => {
   return (
     <div className={css.StatisticsContainer}>
       <h2 className={css.title}>Upload stats</h2>

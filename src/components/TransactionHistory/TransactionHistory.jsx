@@ -1,7 +1,6 @@
-import transactions from '../json/transactions.json';
 import css from './TransactionHistory.module.css'
 
-const TransactionHistory = (props) => {
+const TransactionHistory = ({transactions}) => {
     return (
         <div className={css.transactionsContainer}>
             <table className={css.transactionHistory}>

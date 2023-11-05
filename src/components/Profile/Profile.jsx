@@ -1,9 +1,6 @@
-import user from '../json/user.json'
 import css from './Profile.module.css'
 
-
-
-const Profile = (props) => {
+const Profile = ({user}) => {
     return (
         <div className={css.profile} >
         <div className={css.discription}>
