@@ -1,20 +1,17 @@
-import css from './Statistics.module.css'
+import css from './Statistics.module.css';
 
-const Statistics = ({data}) => {
+const Statistics = ({ title, stats }) => {
   return (
     <div className={css.StatisticsContainer}>
-      <h2 className={css.title}>Upload stats</h2>
-      <section className={css.statistics} >
-      {data.map((data) => (
-        
-          <ul className={css.statList} key={data.id}>
-            <li className={css.item}>
-              <span className={css.label}>{data.label}</span>
-              <span className={css.percentage}>{data.percentage}%</span>
-            </li>
-          </ul>
-        
-      ))}</section>
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className={css.statList}>
+        {stats.map(({ id, label, percentage }) => (
+          <li className={css.item} key={id}>
+            <span className={css.label}>{label}</span>
+            <span className={css.percentage}>{percentage}%</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
